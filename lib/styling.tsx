@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleRegistry, createStyleRegistry } from 'styled-jsx';
+import { createStyleRegistry, StyleRegistry } from 'styled-jsx';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
 
 type ChildProps = { children: React.ReactNode };
@@ -17,7 +17,7 @@ export function useStyledComponentsRegistry() {
     if (typeof window !== 'undefined') return <>{children}</>;
     return (
       <StyleSheetManager sheet={styledComponentsStyleSheet.instance}>
-        {children as React.ReactChild}
+        {children as React.ReactElement}
       </StyleSheetManager>
     );
   }
