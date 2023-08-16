@@ -5,6 +5,7 @@ module.exports = {
     './page/**/*.{js,ts,jsx,tsx}',
     './ui/**/*.{js,ts,jsx,tsx}',
   ],
+  plugins: [require('daisyui')],
   theme: {
     extend: {
       // https://vercel.com/design/color
